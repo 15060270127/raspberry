@@ -1,0 +1,6 @@
+File Edit Search View Document Help
+from PIL import Image
+import pytesseract filename = './chi.txt';
+content = pytesseract.image_to_string(Image.open('/home/pi/opencv-scan/12.jpg'),lang='chi_sim') with open(filename,'a') as f:
+f.write(content)
+print(content)
